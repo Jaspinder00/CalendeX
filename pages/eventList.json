@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "version": "2.0"
+    },
+    "regionContent": [
+        {
+            "elementType": "eventList",
+            "id": "date_results",
+            "titleLineClamp": 2,
+            "descriptionLineClamp": 2,
+            "showTopBorder": false,
+            "showBottomBorder": false,
+            "marginBottom": "none",
+            "items": []
+        }
+    ]
+
+}
