@@ -25,7 +25,7 @@
                         	"targetId": "target_events",
                         	"region": "content",
                         	"action": "ajaxUpdate",
-                        	"ajaxRelativePath": "./events",
+                        	"ajaxRelativePath": "./allevents/events",
                         	"propagateArgs": true,
                         	"requestMethod": "get",
                         	"method": "get"
@@ -37,7 +37,6 @@
     	{
         	"elementType": "container",
         	"id": "target_events",
-        	"backgroundColor": "red",
         	"content": [
         	    {
         	      "elementType": "eventList",
@@ -51,18 +50,7 @@
                 "borderRadius": "tight",
                 "highlightColor": "red",
                 "items": [
-                    {
-                        "datetimePrimaryLine": "Apr 21",
-                        "datetimeSecondaryLine": "11:00am",
-                        "title": "Soccer vs. Baylor",
-                        "description": "Houston, Texas",
-                        "link": {
-                            "module": {
-                                "page": "_/event_details"
-                            }
-                        },
-                        "dividerColor": "#68973f"
-                    }
+                    
                   ]
         	    }
         	 ]
