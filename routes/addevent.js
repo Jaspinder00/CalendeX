@@ -1,20 +1,21 @@
 const express = require('express');
 const eventModel = require('../models/eventModel');
+const userModel = require('../models/userModel')
 const fs = require('fs');
-const eventSection = JSON.parse(fs.readFileSync('./pages/eventList.json', 'utf-8'));
-const allEventsPage = JSON.parse(fs.readFileSync('./pages/allevents.json', 'utf-8'));
+const addEventPage = JSON.parse(fs.readFileSync('./pages/addevent.json', 'utf-8'));
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-	    let result = await allEventsPage;
+	    let result = await addEventPage;
         res.status(200).json(result)
     } catch (error) {
         res.status(500).json({message: error.message})
     }
 });
 
+/*
 router.get('/events', async (req, res) => {
     try {
         let eventData;
@@ -51,5 +52,6 @@ router.get('/events', async (req, res) => {
         res.status(500).json({message: error.message});
     }
 });
+*/
 
 module.exports = router;

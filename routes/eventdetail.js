@@ -20,8 +20,10 @@ router.get('/', async(req, res) => {
                 byline: `${eventModel.date} ${eventModel.startTime}`,
                 body: eventModel.description
             }
+
+            eventDetailPage.content[1].content = [eventDetails];
             //console.log(eventModel.title);
-            res.status(200).send(eventDetails);
+            res.status(200).send(eventDetailPage);
         }).catch((error) => {
             res.status(500).send(error);
         });

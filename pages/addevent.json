@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "version": "2.0"
+    },
+    "contentContainerWidth": "narrow",
+    "content": [
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+            "elementType": "form",
+            "heading": "Add an event",
+            "id": "new_event",
+            "relativePath": "",
+            "items": [
+                {
+                    "elementType": "formInputText",
+                    "name": "title",
+                    "label": "Event Title",
+                    "required": true
+                },
+                {
+                    "elementType": "formInputDate",
+                    "name": "date",
+                    "label": "Date",
+                    "required": true,
+                    "max": "2024-12-31",
+                    "min": "today"
+                },
+                {
+                    "elementType": "formInputTime",
+                    "name": "startTime",
+                    "label": "Start Time",
+                    "required": true
+                },
+                {
+                    "elementType": "formInputTime",
+                    "name": "endTime",
+                    "label": "End Time"
+                },
+                {
+                    "elementType": "formInputText",
+                    "name": "location",
+                    "label": "Location",
+                    "required": true
+                },
+                {
+                    "elementType": "formInputTextarea",
+                    "name": "description",
+                    "label": "Event Description",
+                    "rows": 2
+                },
+                {
+                    "elementType": "formInputAssistedMultiselect",
+                    "name": "categories",
+                    "label": "Categories",
+                    "description": "Select one or more",
+                    "options": [
+                        {
+                            "value": "academic_calendar",
+                            "label": "Academic Calendar"
+                        },
+                        {
+                            "value": "admin_finance",
+                            "label": "Administration and Finance"
+                        },
+                        {
+                            "value": "campus_events",
+                            "label": "Campus Events"
+                        },
+                        {
+                            "value": "arts_and_humanities",
+                            "label": "College of Arts and Humanities"
+                        },
+                        {
+                            "value": "health_and_human_services",
+                            "label": "College of Health and Human Services"
+                        },
+                        {
+                            "value": "science_and_math",
+                            "label": "College of Science and Mathematics"
+                        },
+                        {
+                            "value": "continuing_and_global_ed",
+                            "label": "Continuing and Global Education"
+                        },
+                        {
+                            "value": "craig_school_of_business",
+                            "label": "Craig School of Business"
+                        },
+                        {
+                            "value": "regular_events",
+                            "label": "Events"
+                        },
+                        {
+                            "value": "jordan_ag_science",
+                            "label": "Jordan College of Agricultural Sciences"
+                        },
+                        {
+                            "value": "kremen_school",
+                            "label": "Kremen School"
+                        },
+                        {
+                            "value": "fs_library",
+                            "label": "Library"
+                        },
+                        {
+                            "value": "lyles_engineering",
+                            "label": "Lyles College of Engineering"
+                        },
+                        {
+                            "value": "office_of_president",
+                            "label": "Office of the President"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "buttonContainer",
+                    "buttons": [
+                        {
+                            "elementType": "formButton",
+                            "title": "Add to Calendar",
+                            "buttonType": "submit",
+                            "accessoryIcon": "plus",
+                            "actionType": "destructive"
+                        },
+                        {
+                            "elementType": "formButton",
+                            "title": "Reset",
+                            "buttonType": "reset",
+                            "accessoryIcon": "reset"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

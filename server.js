@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const eventsRouter = require('./routes/events');
 const pageRouter = require('./routes/allevents');
 const detailRouter = require('./routes/eventdetail');
+const addEventRouter = require('./routes/addevent');
 
 const PORT = 3000;
 const uri = 'mongodb+srv://admin:fscalendex23@calendex.2cg3igq.mongodb.net/?retryWrites=true&w=majority';
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use('/events', eventsRouter);
 app.use('/allevents', pageRouter);
 app.use('/eventdetail', detailRouter);
+app.use('/addevent', addEventRouter);
 
 app.use('/', (req, res) => {
     res.send('CalendeX server runs successfully');

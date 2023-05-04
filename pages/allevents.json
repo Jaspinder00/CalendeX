@@ -2,50 +2,102 @@
     "metadata": {
         "version": "2.0"
     },
+    "contentContainerWidth": "narrow",
     "content": [
         {
-            "elementType": "form",
-            "relativePath": "./items",
-            "items": [
-                {
-                    "elementType": "formInputDate",
-                    "id": "selected_date",
-                    "label": "Events Directory",
-                    "description": "Please select a date to view the events",
-                    "name": "date",
-                    "min": "2023-01-01",
-                    "max": "2023-12-31",
-                    "events": [
-                        {
-                            "eventName": "change",
-                            "targetId": "target_events",
-                            "region": "content",
-                            "action": "ajaxUpdate",
-                            "ajaxRelativePath": "./allevents/events",
-                            "propagateArgs": true,
-                            "requestMethod": "get",
-                            "method": "get"
-                        }
-                    ]
-                }
-            ]
+            "elementType": "divider",
+            "borderColor": "transparent"
         },
         {
-            "elementType": "container",
-            "id": "target_events",
+            "elementType": "portlet",
+            "id": "tabs",
+            "forceAjaxOnLoad": false,
+            "paddingTop": "none",
+            "margin": "none",
+            "borderStyle": "none",
             "content": [
                 {
-                    "elementType": "eventList",
-                    "backgroundColor": "theme:subfocal_background_color",
-                    "id": "basic",
-                    "titleLineClamp": 2,
-                    "descriptionLineClamp": 2,
-                    "showTopBorder": true,
-                    "showBottomBorder": false,
-                    "marginBottom": "none",
-                    "borderRadius": "tight",
-                    "highlightColor": "red",
-                    "items": []
+                    "elementType": "tabs",
+                    "tabStyle": "folder",
+                    "contentPaddingTop": "medium",
+                    "size": "small",
+                    "tabs": [
+                        {
+                            "title": "Tab A",
+                            "content": [
+                                {
+                                    "elementType": "html",
+                                    "html": "First Tab"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Tab B",
+                            "content": [
+                                {
+                                    "elementType": "linkButton",
+                                    "title": "Add an Event",
+                                    "id": "add_button",
+                                    "link": {
+                                        "xmodule": {
+                                            "id": "cx_add_event"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Tab C",
+                            "content": [
+                                {
+                                    "elementType": "form",
+                                    "relativePath": "./items",
+                                    "items": [
+                                        {
+                                            "elementType": "formInputDate",
+                                            "id": "selected_date",
+                                            "label": "Events Directory",
+                                            "description": "Please select a date to view the events",
+                                            "name": "date",
+                                            "min": "2023-01-01",
+                                            "max": "2023-12-31",
+                                            "events": [
+                                                {
+                                                    "eventName": "change",
+                                                    "targetId": "target_events",
+                                                    "region": "content",
+                                                    "action": "ajaxUpdate",
+                                                    "ajaxRelativePath": "./allevents/events",
+                                                    "propagateArgs": true,
+                                                    "requestMethod": "get",
+                                                    "method": "get"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "container",
+                                    "id": "target_events",
+                                    "content": [
+                                        {
+                                            "elementType": "eventList",
+                                            "backgroundColor": "theme:subfocal_background_color",
+                                            "id": "basic",
+                                            "titleLineClamp": 2,
+                                            "descriptionLineClamp": 2,
+                                            "showTopBorder": true,
+                                            "showBottomBorder": false,
+                                            "marginBottom": "none",
+                                            "borderRadius": "tight",
+                                            "highlightColor": "red",
+                                            "items": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
