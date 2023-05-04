@@ -1,0 +1,22 @@
+{
+    "metadata": {
+        "version": "2.0"
+    },
+    "contentContainerWidth": "narrow",
+    "content": [
+        {
+            "elementType": "divider",
+            "borderColor": "transparent"
+        },
+        {
+            "elementType": "container",
+            "id": "detailTarget",
+            "content": [
+                {
+                    "elementType": "html",
+                    "html": "Link from event list worked"
+                }
+            ]
+        }
+    ]
+}

@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-	let result = await allEventsPage;
+	    let result = await allEventsPage;
         res.status(200).json(result)
     } catch (error) {
         res.status(500).json({message: error.message})
@@ -29,12 +29,18 @@ router.get('/events', async (req, res) => {
         for (let key in eventData)
         {
             eventContent.push({
-		//_id: eventData[key]._id,
+		        //_id: eventData[key]._id,
                 datetimePrimaryLine: eventData[key].date,
                 datetimeSecondaryLine: eventData[key].startTime,
                 title: eventData[key].title,
                 description: eventData[key].location,
-                dividerColor: '#FF0000'
+                dividerColor: '#FF0000',
+                link: {
+                    xmodule: {
+                        id: "cx_add_event",
+                        relativePath: "/eventdetail"
+                    }
+                }
             });
         }
         eventSection.regionContent[0].items = eventContent;
